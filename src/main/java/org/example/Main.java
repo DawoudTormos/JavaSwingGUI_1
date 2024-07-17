@@ -1,9 +1,12 @@
 package org.example;
 
 import static java.lang.System.*;
+import java.io.File;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -12,26 +15,34 @@ public class Main {
 
 
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-
-        JFrame f1 = new JFrame();
-
-        f1.setSize(420,420);
-        f1.setTitle("f1 title")     ;
-        f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        /*JFrame.EXIT_ON_CLOSE
-        JFrame.HIDE_ON_CLOSE
-        JFrame.DO_NOTHING_ON_CLOSE
-        */
-        f1.setResizable(false);
+    public static void main(String[] args) throws IOException/* TO use ImageIO.read*/ {
+        out.println("Hello World!");
 
 
-        // ImageIcon icon = new ImageIcon("C:/Users/Dawoud Tormos/Documents/NetBeansProjects/JavaSwingGui_1/src/main/java/java.png");
-        ImageIcon icon = new ImageIcon("./src/main/resources/java.png");
-        Image img = icon.getImage();
-        f1.setIconImage(img);
+        //changing image size
+        BufferedImage originalImage = ImageIO.read(new File("./src/main/resources/java.png"));
+        ImageIcon icon = new ImageIcon(  originalImage.getScaledInstance(100, 100, Image.SCALE_SMOOTH));
+
+
+        Frame1 f1 = new Frame1("my title");
+        f1.setSize(500 , 500);
         f1.setVisible(true);
+
+
+        JLabel l1 = new JLabel();
+        l1.setText("Hello World!");
+        l1.setIcon(icon);
+
+
+        f1.add(l1);
+        f1.setVisible(true);//You should set Visibility again after adding a component
+
+
+
+
+
+
+
 
 
     }
