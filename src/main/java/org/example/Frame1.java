@@ -22,7 +22,7 @@ public class Frame1 extends javax.swing.JFrame {
         // ImageIcon icon = new ImageIcon("C:/Users/Dawoud Tormos/Documents/NetBeansProjects/JavaSwingGui_1/src/main/java/java.png");
         ImageIcon icon = new ImageIcon("./src/main/resources/java.png");
         this.setIconImage(icon.getImage());
-        //this.getContentPane().setBackground(new Color(100 , 100 , 0));// yellow variation
+        this.getContentPane().setBackground(new Color(190 , 190 , 190));// yellow variation
 
         //getting yellow vslues
         //out.println(Color.YELLOW.getRed() + " " + Color.YELLOW.getGreen() + " "+ Color.YELLOW.getBlue());
