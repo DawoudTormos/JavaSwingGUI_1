@@ -1,6 +1,9 @@
 package org.example;
 
 import static java.lang.System.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -27,16 +30,74 @@ public class Main {
         BufferedImage originalImage = ImageIO.read(new File("./src/main/resources/java.png"));
         ImageIcon icon = new ImageIcon(  originalImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 
+         originalImage = ImageIO.read(new File("./src/main/resources/click-me-icon.png"));
+        ImageIcon clickMeIcon = new ImageIcon(  originalImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
         // end
 
+        //
+        Frame2 frame = new Frame2("Buttons",600,700);
+        frame.setIconImage(icon.getImage());
+        frame.setVisible(true);
 
 
+        JButton button = new JButton("Click Me");
+        button.setBounds(50, 50, 140, 50);
+        button.addActionListener(frame);
+        Border border = BorderFactory.createLineBorder(Color.black , 4);
+        //button.setBorder(border);
+        button.setFocusable(false);
+        button.setIcon(clickMeIcon);
+        frame.add(button);
 
 
+        JButton button2 = new JButton("Click Me Lambda");
+        button2.setBounds(50, 150, 140, 50);
+        button2.addActionListener((e)->{
+            out.println("clicked the click me JButton with lambda function as actionListeners");
+        });
+        frame.add(button2);
 
 
+        //modern look for button
+        JButton button3 = new JButton("Modern Button");
+        button3.setBounds(50, 250, 140, 50);
+        button3.setBackground(new Color(45, 45, 45));
+        button3.setForeground(Color.WHITE);
+        button3.setFont(new Font("Arial", Font.BOLD, 13));
+        button3.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        button3.setFocusPainted(false);
+        frame.add(button3);
+
+        //modern look for button using a class and with hover effects
+        ModernJButton button4 = new ModernJButton("Modern Button2");
+        button4.setBounds(50, 350, 140, 50);
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    out.println("clicked:\t" + e.getSource().toString());
+            }
+        });
+        frame.add(button4);
 
 
+        JButton button5 = new JButton( "Button 5");
+        button5.setBounds(50, 450, 140, 55);
+        button5.setIcon(clickMeIcon);
+        button5.setFocusable(false);
+        button5.setHorizontalTextPosition(JButton.CENTER);
+        button5.setVerticalTextPosition(JButton.BOTTOM);
+        button5.setFont(new Font("Comic Sans", Font.BOLD, 16));
+        button5.setIconTextGap(-2);
+        button5.setForeground(Color.CYAN);
+        button5.setBackground(Color.lightGray);
+        button5.setBorder(BorderFactory.createEtchedBorder());
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                out.println("clicked:\t" + e.getSource().toString());
+            }
+        });
+        frame.add(button5);
 
 
 
@@ -45,7 +106,7 @@ public class Main {
 
         //commit: Working with panels
 
-        JPanel panel1 = new JPanel();
+        /*JPanel panel1 = new JPanel();
         panel1.setBackground(Color.red);
         panel1.setBounds(10,10,250,250);
 
@@ -86,7 +147,7 @@ public class Main {
         f1.add(panel2);
         f1.add(panel3);
         f1.setLayout(null);
-        f1.setVisible(true);
+        f1.setVisible(true);*/
 
 
 

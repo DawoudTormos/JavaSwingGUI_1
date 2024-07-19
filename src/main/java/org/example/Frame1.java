@@ -5,11 +5,11 @@ import java.awt.*;
 
 import static java.lang.System.out;
 
-public class Frame1 extends javax.swing.JFrame {
+public class Frame1 extends JFrame {
     public Frame1(String title) {
         this.setVisible(true);
 
-        this.setSize(420,420);
+        this.setSize(600,600);
         this.setTitle(title)     ;
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         /*JFrame.EXIT_ON_CLOSE
