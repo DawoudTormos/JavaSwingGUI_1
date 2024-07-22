@@ -34,7 +34,60 @@ public class Main {
         ImageIcon clickMeIcon = new ImageIcon(  originalImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
         // end
 
-        //
+
+
+        BorderLayoutFrame frame = new BorderLayoutFrame(600,600);
+
+        JPanel p1 = new JPanel();
+        JPanel p2 = new JPanel();
+        JPanel p3 = new JPanel();
+        JPanel p4 = new JPanel();
+        JPanel p5 = new JPanel();
+
+        p1.setBackground(Color.RED);p1.setPreferredSize(new Dimension(100, 70));
+        p2.setBackground(Color.green);p2.setPreferredSize(new Dimension(70, 70));
+        p3.setBackground(Color.yellow);p3.setPreferredSize(new Dimension(70, 70));
+        p4.setBackground(Color.magenta);p4.setPreferredSize(new Dimension(70, 70));
+        p5.setBackground(Color.blue);p5.setPreferredSize(new Dimension(70, 70));
+
+        frame.add(p1,BorderLayout.NORTH);
+        frame.add(p2,BorderLayout.WEST);
+        frame.add(p3,BorderLayout.EAST);
+        frame.add(p4,BorderLayout.SOUTH);
+        frame.add(p5,BorderLayout.CENTER);
+        //frame.setVisible(true);
+
+
+
+
+        //                  sub-panels in p5            //
+        JPanel p6 = new JPanel();
+        JPanel p7 = new JPanel();
+        JPanel p8 = new JPanel();
+        JPanel p9 = new JPanel();
+        JPanel p10 = new JPanel();
+
+        p6.setBackground(Color.gray);p6.setPreferredSize(new Dimension(100, 70));
+        p7.setBackground(Color.lightGray);p7.setPreferredSize(new Dimension(70, 70));
+        p8.setBackground(Color.blue);p8.setPreferredSize(new Dimension(70, 70));
+        p9.setBackground(Color.black);p9.setPreferredSize(new Dimension(70, 70));
+        p10.setBackground(Color.darkGray);p10.setPreferredSize(new Dimension(70, 70));
+
+        p5.setLayout(new BorderLayout());
+        p5.add(p6,BorderLayout.NORTH);
+        p5.add(p7,BorderLayout.WEST);
+        p5.add(p8,BorderLayout.EAST);
+        p5.add(p9,BorderLayout.SOUTH);
+        p5.add(p10,BorderLayout.CENTER);
+
+
+
+
+
+        
+
+        //Commit:Working with : Buttons, actionlistners, mouselisenteners, adding a Designed JButton class "ModernJButton" and using three ways for adding the listeners(lambda, object of listners class and frame implemetning listners class).
+        /*
         Frame2 frame = new Frame2("Buttons",600,700);
         frame.setIconImage(icon.getImage());
         frame.setVisible(true);
@@ -98,6 +151,8 @@ public class Main {
             }
         });
         frame.add(button5);
+
+         */
 
 
 
