@@ -39,8 +39,12 @@ public class Main {
         // end
 
 
+        MainWindow main = new MainWindow();
 
-        AbsolutePositioningLayoutFrame frame = new AbsolutePositioningLayoutFrame(620,650);
+
+
+        //Commit: Working with JLayeredPane.
+        /*AbsolutePositioningLayoutFrame frame = new AbsolutePositioningLayoutFrame(620,650);
         frame.setIconImage(icon.getImage());
 
         JLayeredPane layeredPane = new JLayeredPane();
@@ -64,7 +68,7 @@ public class Main {
 
 
         layeredPane.add(l1, Integer.valueOf(0));
-        layeredPane.add(l2, Integer.valueOf(1));
+        layeredPane.add(l2, Integer.valueOf(1));*/
 
 
 
