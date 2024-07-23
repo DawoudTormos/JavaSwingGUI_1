@@ -6,12 +6,13 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 class ModernJButton extends JButton {
-    private Color normalColor = new Color(45, 45, 45);
-    private Color hoverColor = new Color(70, 70, 70);
+    private final Color normalColor = new Color(45, 45, 45);
+    private final  Color hoverColor = new Color(70, 70, 70);
 
     public ModernJButton(String text) {
         super(text);
         setBackground(normalColor);
+        addActionListener((e)-> System.out.println("clicked:\t" + ((JButton)e.getSource()).getText()));
         setContentAreaFilled(false);
         setFocusPainted(false);
         setForeground(Color.WHITE);

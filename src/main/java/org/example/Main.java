@@ -2,6 +2,10 @@ package org.example;
 
 import static java.lang.System.*;
 
+//below imports that appear unused are used in a commented code
+// each commented block of code could be used and tested by downloading the repo at the commit message for the comment block
+//each comment block have its commit message typed above it
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -34,14 +38,31 @@ public class Main {
         ImageIcon clickMeIcon = new ImageIcon(  originalImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
         // end
 
-        FlowLayoutFrame frame = new FlowLayoutFrame(600,600, FlowLayout.CENTER,10,100);
 
+        GridLayoutFrame frame = new GridLayoutFrame(500,500,3,3,10,10);
+
+        frame.add(new ModernJButton("1"));
+        frame.add(new ModernJButton("2"));
+        frame.add(new ModernJButton("3"));
+        frame.add(new ModernJButton("4"));
+        frame.add(new ModernJButton("5"));
+        frame.add(new ModernJButton("6"));
+        frame.add(new ModernJButton("7"));
+        frame.add(new ModernJButton("8"));
+        frame.add(new ModernJButton("9"));
+
+        frame.setVisible(true);
+
+
+
+        //Commit: Working with FlowLayout. Creating a FlowLayoutFrame class
+        /*
+        FlowLayoutFrame frame = new FlowLayoutFrame(600,600, FlowLayout.CENTER,10,100);
 
         JPanel p1 = new JPanel();
         p1.setPreferredSize(new Dimension(250, 250));
         p1.setBackground(Color.lightGray);
         p1.setLayout(new FlowLayout());
-
 
         p1.add(new JButton("1"));
         p1.add(new JButton("2"));
@@ -55,7 +76,7 @@ public class Main {
 
         frame.add(p1);
 
-        frame.setVisible(true);
+        frame.setVisible(true);*/
 
 
 
