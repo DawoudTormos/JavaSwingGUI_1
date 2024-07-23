@@ -34,9 +34,34 @@ public class Main {
         ImageIcon clickMeIcon = new ImageIcon(  originalImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
         // end
 
+        FlowLayoutFrame frame = new FlowLayoutFrame(600,600, FlowLayout.CENTER,10,100);
 
 
-        BorderLayoutFrame frame = new BorderLayoutFrame(600,600);
+        JPanel p1 = new JPanel();
+        p1.setPreferredSize(new Dimension(250, 250));
+        p1.setBackground(Color.lightGray);
+        p1.setLayout(new FlowLayout());
+
+
+        p1.add(new JButton("1"));
+        p1.add(new JButton("2"));
+        p1.add(new JButton("3"));
+        p1.add(new JButton("4"));
+        p1.add(new JButton("5"));
+        p1.add(new JButton("6"));
+        p1.add(new JButton("7"));
+        p1.add(new JButton("8"));
+        p1.add(new JButton("9"));
+
+        frame.add(p1);
+
+        frame.setVisible(true);
+
+
+
+
+        //Commit : Working with BorderLayout. Creating a BorderLayoutFrame class
+        /*BorderLayoutFrame frame = new BorderLayoutFrame(600,600);
 
         JPanel p1 = new JPanel();
         JPanel p2 = new JPanel();
@@ -78,7 +103,7 @@ public class Main {
         p5.add(p7,BorderLayout.WEST);
         p5.add(p8,BorderLayout.EAST);
         p5.add(p9,BorderLayout.SOUTH);
-        p5.add(p10,BorderLayout.CENTER);
+        p5.add(p10,BorderLayout.CENTER);*/
 
 
 
