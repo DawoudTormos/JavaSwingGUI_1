@@ -35,11 +35,44 @@ public class Main {
         ImageIcon icon = new ImageIcon(  originalImage.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 
          originalImage = ImageIO.read(new File("./src/main/resources/click-me-icon.png"));
-        ImageIcon clickMeIcon = new ImageIcon(  originalImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+        ImageIcon clickMeIcon = new ImageIcon(  originalImage.getScaledInstance(60, 60, Image.SCALE_SMOOTH));
         // end
 
 
-        GridLayoutFrame frame = new GridLayoutFrame(500,500,3,3,10,10);
+
+        AbsolutePositioningLayoutFrame frame = new AbsolutePositioningLayoutFrame(620,650);
+        frame.setIconImage(icon.getImage());
+
+        JLayeredPane layeredPane = new JLayeredPane();
+        layeredPane.setBorder(BorderFactory.createEtchedBorder(Color.BLACK, Color.BLACK));
+        layeredPane.setBounds(50,50,500,500);
+
+        frame.add(layeredPane);
+
+        JLabel l1 = new JLabel(clickMeIcon);
+        l1.setOpaque(true);
+        l1.setBackground(Color.RED);
+        l1.setBounds(50,50,200,200);
+
+        JLabel l2 = new JLabel(clickMeIcon);
+        l2.setOpaque(true);
+        l2.setBackground(Color.blue);
+        l2.setBounds(150,150,200,200);
+
+        //layeredPane.add(l1, JLayeredPane.POPUP_LAYER);
+        //layeredPane.add(l2, JLayeredPane.DRAG_LAYER);
+
+
+        layeredPane.add(l1, Integer.valueOf(0));
+        layeredPane.add(l2, Integer.valueOf(1));
+
+
+
+
+
+
+        //Commit: Working with GridLayout. Creating a GridLayoutFrame class
+        /*GridLayoutFrame frame = new GridLayoutFrame(500,500,3,3,10,10);
 
         frame.add(new ModernJButton("1"));
         frame.add(new ModernJButton("2"));
@@ -51,7 +84,9 @@ public class Main {
         frame.add(new ModernJButton("8"));
         frame.add(new ModernJButton("9"));
 
-        frame.setVisible(true);
+        frame.setVisible(true);*/
+
+
 
 
 
