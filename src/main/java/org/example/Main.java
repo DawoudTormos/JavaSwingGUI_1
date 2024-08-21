@@ -34,7 +34,18 @@ public class Main {
         // end
 
 
-        new MyFrame3();
+
+        new MyFrame4();
+
+        /*
+        Working with :
+        a MenuBar,
+        a progress Bar
+        setMnemonic() for shotcuts
+
+        Using a FlowLayout.
+         */
+        /*new MyFrame3();*/
 
         /*
         Commit:
