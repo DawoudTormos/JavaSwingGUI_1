@@ -34,8 +34,22 @@ public class Main {
         // end
 
 
+        new MyFrame3();
 
-        new MyFrame2();
+        /*
+        Commit:
+        checkboxs,
+        Radio Buttons,
+        Combo boxes,
+        Slider,
+        Several textFields
+
+        Using a GridBagLayout and GridBagConstraints.
+         */
+        /*new MyFrame2();*/
+
+
+
 
         //Commit: Working with :
         //checkboxs,
