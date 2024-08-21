@@ -116,7 +116,5 @@ public class MyFrame1 extends JFrame implements ActionListener, ChangeListener {
         }
     }
 
-    public static void main(String[] args) {
-        new MyFrame1();
-    }
+
 }
