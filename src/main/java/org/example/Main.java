@@ -34,8 +34,20 @@ public class Main {
         // end
 
 
-        new MyFrame1();
 
+        new MyFrame2();
+
+        //Commit: Working with :
+        //checkboxs,
+        //Radio Buttons,
+        //Combo boxes,
+        //Slider,
+        //Several textFields
+        //
+        //Using a flowLayout. Correcting a bug
+        /*
+        //new MyFrame1();
+         */
 
         //Commit: Working with JOptionPane.
         //JOptionPane = pop up a standard dialog box that prompts users for a value
