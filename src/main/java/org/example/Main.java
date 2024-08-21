@@ -6,14 +6,9 @@ import static java.lang.System.*;
 // each commented block of code could be used and tested by downloading the repo at the commit message for the comment block
 //each comment block have its commit message typed above it
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -39,10 +34,14 @@ public class Main {
         // end
 
 
+        new MyFrame1();
+
+
+        //Commit: Working with JOptionPane.
         //JOptionPane = pop up a standard dialog box that prompts users for a value
         //				or informs them of something.
 
-        JOptionPane.showMessageDialog(null, "This is a message dialog box", "title", JOptionPane.PLAIN_MESSAGE);
+        /*JOptionPane.showMessageDialog(null, "This is a message dialog box", "title", JOptionPane.PLAIN_MESSAGE);
         JOptionPane.showMessageDialog(null, "Here is some useless info", "title", JOptionPane.INFORMATION_MESSAGE);
         JOptionPane.showMessageDialog(null, "really?", "title", JOptionPane.QUESTION_MESSAGE);
         JOptionPane.showMessageDialog(null, "Your computer has a VIRUS!", "title", JOptionPane.WARNING_MESSAGE);
@@ -64,8 +63,7 @@ public class Main {
                 responses,
                 responses[0]);
         System.out.println(answer1);
-        System.out.println(answer2);
-
+        System.out.println(answer2);*/
 
 
         //commit:Working with going between frames. using frame.dispose(), new frame objects and actionlisteneres.
